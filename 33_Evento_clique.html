@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Seja bem vindo</h1>
+
+    <input id="campo" type="text" name="usuario"  value="Nome do usuário"/>
+
+    <!--Colocar a função dentro do onclick-->
+    <button onclick="clicou()">Clique</button>
+    <button onclick="clicouAlterou()">Altera texto</button>
+    <button onmouseover="passaMouse()"">Passe o mouse</button>
+    <button onmouseout="tiraMouse()">Passa Mouse</button>
+
+    <script>
+
+        function clicou(){
+            alert("Você clicou no botão");
+        }
+
+        function clicouAlterou(){
+            document.getElementById("titulo").innerHTML = "Texto alterado!";
+        }
+
+        function passaMouse(){
+            console.log("Você passou o mouse!")
+        }
+
+        function tiraMouse(){
+            console.log("Você tirou o mouse!")
+        }
+
+    </script>
+</body>
+</html>

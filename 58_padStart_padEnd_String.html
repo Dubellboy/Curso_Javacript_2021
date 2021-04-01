@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PadStart PadEnd</title>
+</head>
+<body>
+    <script>
+       //Funções de manipulação de string
+
+       //PADEND - preenche para a direita
+       
+       let telefone = '56789';
+
+        //Primeiro argumento diz quantos valores tem que ter, o segundo diz 
+        //que será completado os faltantes com esse valor
+       console.log( telefone.padEnd(9,'*'));
+
+
+       //PADSTART - preenche para a esquerda
+       let cartao = '12345678912345';
+
+       let lastDigits = cartao.slice(-4);
+
+       let cartaoMascarado = lastDigits.padStart(16, '*');
+
+    //Primeiro argumento diz quantos valores tem que ter, o segundo diz 
+    //que será completado os faltantes com esse valor
+    console.log('Este é o seu cartão? ' + cartaoMascarado);
+
+
+
+    </script>
+</body>
+</html>

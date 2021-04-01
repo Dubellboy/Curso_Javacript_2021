@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos Strings</title>
+</head>
+<body>
+    <script>
+        let nome = 'Eduardo Chagas';
+        let nome2 = '                   Eduardo Chagas';
+        
+        //mostrar quantidade de strings
+        let resultado = nome.length;
+        //Mostrar uma quantidade de uma letras específica
+        let resultado2 = nome.indexOf('Chagas');
+
+        //Condição para achar uma palavra
+        let resultado3 ='';
+        if(nome.indexOf('Chagas') > -1){
+            resultado3 = 'Achou';
+        }else {
+            resultado3 = "Não cahou";
+        }
+
+        //extrair parte da string, colocar a posição inicial e final
+        //números negativos começam do final da string
+        let resultado4 = nome.slice(0,10)
+
+        //extrair parte da string, colocar a posição inicial e final
+        //Não tem números negativos
+        let resultado5 = nome.substring(0,5);
+
+        //parametro é posição inicial e o segundo é quantos caracteres ele vai pegar
+        //funciona com valores negativos
+        let resultado6 = nome.substr(4,5);//Mais indicado
+
+        //Substituir string
+        let resultado7 = nome.replace('Chagas', 'Santos');
+
+        //Deixar as letras todas maiúsuculas
+        let resultado8 = nome.toUpperCase();
+
+        //Deixar letras minúsculas
+        let resultado9 = nome.toLowerCase();
+
+        //Retirar os espaços vazios
+        let resultado10 = nome2.trim();
+
+        //Saber qual posição está um caracter
+        let resultado11 = nome.charAt(5);//melhor usar a substr
+
+        //Transformar string em array
+        let resultado12 = nome.split(' ');//informar o separador da informação
+
+
+        console.log(resultado);
+        console.log(resultado2);
+        console.log(resultado3);
+        console.log(resultado4);
+        console.log(resultado5);
+        console.log(resultado6);
+        console.log(resultado7);
+        console.log(resultado8);
+        console.log(resultado9);
+        console.log(resultado10);
+        console.log(resultado11);
+        console.log(resultado12);
+        </script>
+</body>
+</html>

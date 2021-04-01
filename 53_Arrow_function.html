@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <script>
+        //Formas de criaar funções
+
+        function somar(x,y) {
+            return x + y;
+        }
+
+        console.log(somar(10,5));
+
+        //2º forma
+
+        let soma = function(x,y){
+        return x + y;
+
+        };
+        console.log(soma(5,5));
+
+        //3º Forma
+
+        let calculo = (x,y) => { return x + y;}// com colchetes usa o return
+
+        console.log(calculo(2,2));
+
+        let multiplica = (x,y) => x * y; //Sem o colchete não usa return
+
+        console.log(multiplica(3,3));
+
+        let letrasNoNome = nome =>  nome.length // Somente com um parametro
+
+        console.log(letrasNoNome("Eduardo"));
+
+        let palavras = () =>  nome// Somente com um parametro
+
+        console.log(palavras());
+
+
+    </script>
+</body>
+</html>

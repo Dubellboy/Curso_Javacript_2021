@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Título principal</h1>
+
+    <h2 class="subtitle">Este é o segundo título</h2>
+        <p id="paragrafo">Este é o paragrafo</p>
+        <ul id="lista">
+            <li class="item">Item 1</li>
+            <li class="item">Item 2</li>
+            <li class="item">Item 3</li>
+            <li class="item">Item 4</li>
+        </ul>
+    
+
+
+        <p id="paragrafo">Este é o paragrafo</p>
+        <ul id="lista2">
+            <li class="Uva">Uva</li>
+            <li class="item">Limão</li>
+            <li class="item">Maçã</li>
+            <li class="item">Banana</li>
+        </ul>
+  
+
+    <script>
+        var title = document.querySelector("#title");
+
+        console.log(title);
+        //Alterar com innerHTML
+        title.innerHTML = "Texto alterado";
+
+        //Alterar com textContent - mais usado e performatico
+        var subtitle = document.querySelector(".subtitle");
+        console.log(subtitle);
+
+        subtitle.textContent = " Subtitulo alterado";
+
+        console.log(subtitle);
+
+    </script>
+</body>
+</html>

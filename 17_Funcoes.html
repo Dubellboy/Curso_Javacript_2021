@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <script>
+        //Funções são blocos de códigos reutilizáveis
+        //Evita repetições
+
+        function primeiraFuncao(){//argumentos
+            console.log("Hello World");
+        }
+
+        primeiraFuncao();//Evocando a função
+
+        function dizerNome(nome) {
+
+            console.log( "O nonme é: " + nome);
+        }
+
+        dizerNome("Eduardo");
+
+        function soma(a, b){
+            return a + b;
+        }
+
+        console.log(soma(5,3));
+
+        //Callback grealmente são funções que ocorrem
+        //após algum evento.
+        addEventListener('click', function(){
+            console.log('Clicou');
+        });
+        
+    </script>
+</body>
+</html>

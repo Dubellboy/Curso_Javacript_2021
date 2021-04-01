@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--Ação quando você digita esse mais usado-->
+    <input id="campo" type="text" onkeyup="digitou()">
+    <br />
+    <!--Ação quando você segura a tecla-->
+    <input id="campo" type="text" onkeydown="digitou()">
+    <br />
+    <input id="campo" type="text" onkeydown="digitou2(event)">
+    <br />
+    <!--Função com condição específica-->
+    <input id="campo3" type="text" onkeyup="digitou3(event)">
+    <br />
+      <!--Função para quando pressionar ctrl + enter-->
+      <input id="campo4" type="text" onkeyup="digitou4(event)">
+    <script>
+
+        function digitou(){
+            console.log("você digitou.")
+        }
+        
+        //Função com parametro, mostra o keycode
+        function digitou2(e){
+            console.log(e);
+        }
+        //Função para funcionar somente se apertar o ENTER
+        function digitou3(e){
+            if(e.keyCode == 13){
+                let texto = document.getElementById("campo3").value;
+                console.log(texto);
+            }
+        }
+         //Função para funcionar somente se apertar o ENTER
+         function digitou4(e){
+            if(e.keyCode == 13 && e.ctrlKey == true){
+                let texto = document.getElementById("campo4").value;
+                console.log(texto);
+            }
+        }
+    </script>
+
+    </body>
+</html>

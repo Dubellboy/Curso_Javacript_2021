@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Seja bem vindo!</h1>
+
+    <div id="dia"></div>
+    <script>
+        //Valor específico vários valores diferentes.
+        let dia = 9;
+        let diaNome = '';
+
+        switch(dia){
+            case 1: diaNome = 'Segunda -Feira'
+            break;
+            case 2: diaNome = 'Terça -Feira'
+            break;
+            case 3: diaNome = 'Quarta -Feira'
+            break;
+            case 4: diaNome = 'Quinta-Feira'
+            break;
+            case 5: diaNome = 'Sexta -Feira'
+            break;
+            case 6: diaNome = 'Sábado'
+            break;
+            case 7: diaNome = 'Domingo'
+            break;
+            default:diaNome = "Esse dia não é válido!"
+        }
+
+        document.getElementById('dia').innerHTML = "Hoje é: " + diaNome;
+    </script>
+</body>
+</html>

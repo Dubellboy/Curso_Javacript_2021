@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Date</title>
+</head>
+<body>
+
+    <script>
+
+        let d = new Date();
+        console.log(d);
+        console.log(d.toDateString());//Froma resumida
+        console.log(d.toUTCString());
+        console.log(d.toString());//Retorna igual a variaável
+
+        let d2 = new Date(2020, 0, 1, 12, 30, 12  )//Mês começa no 0.
+        console.log("Data colocada no parâmetro" + d2);
+
+        let d3 = new Date('2020-01-01 15:42:17');
+        console.log(d3.toString());
+
+        /*************************MANIPULAR DATAS********************************/
+
+        let manipulaData = new Date();
+
+        let novoValor = d.getFullYear();
+        let novoValor1 = d.getMonth();
+        let novoValor2 = d.getDay();//Domingo é o dia zero
+        let novoValor3 = d.getDate();
+        let novoValor4 = d.getHours();
+        let novoValor5 = d.getMinutes();
+        let novoValor6 = d.getSeconds();
+        let novoValor7 = d.getMilliseconds();
+        let novoValor8 = d.getTime();//Quantidade de milesgundo de 1970 atá hoje
+        let novoValor9 = Date.now()
+
+
+       
+        console.log("Mostrar só o ano: " + novoValor);
+        console.log("Mostrar só o mês: " + novoValor1);
+        console.log("Mostrar o dia da semana: " + novoValor2);
+        console.log("Mostrar o dia atual: " + novoValor3);
+        console.log("Mostrar hora : " + novoValor4);
+        console.log("Mostrar minutos: " + novoValor5);
+        console.log("Mostrar milisegundos: " + novoValor7);
+        console.log("Mostrar milisegundos desde 1970: " + novoValor8);
+        console.log("Mostrar data atual: " + novoValor9);
+
+
+        /*******************************Alterando datas(SET)***************************/novoValor
+
+        let data = new Date();
+
+        data.setFullYear(2022);
+
+        let novaData = data;
+        let novaData1 = data.setMonth(11);
+        let novaData2= data.setDate(15);//Para aumentar o dia só colocar + e a qtd de dias
+        let novaData3 = data.setHours(d.getHours() + 23);
+        let novaData4 = data;
+        let novaData5 = data;
+
+
+        console.log("Ano alterado" + novaData);
+        console.log("Mês alterado: " + novaData1);
+        console.log("Dia alterado: " + novaData2);
+        console.log("Alterando as horas: " + novaData3);
+        console.log(novaData4);
+
+      
+
+
+
+
+    </script>
+</body>
+</html>

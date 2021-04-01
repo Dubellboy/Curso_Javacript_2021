@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconstruindo Objeto</title>
+</head>
+<body>
+    <script>
+        let pessoa = {
+            nome: "Eduardo",
+            sobrenome:'Chagas',
+            idade: 36,
+            social: {
+                facebook:'kjkjk',
+                instagram:'eduardo',
+            },
+            nomecompleto: function(){
+                return `${this.nome} ${this.sobrenome}`;
+            }
+        };
+
+        //Desestruturação, transforar objeto em váriavel
+
+        // let {nome:nome, sobrenome, idade} = pessoa;
+
+        //  console.log(nome, sobrenome, idade);
+
+        //Pegando o onjeto dentro do objeto
+
+        let {nome, idade,social: {instagram}} = pessoa;
+
+        console.log(nome, idade, instagram);
+
+        function pegarNomeCompleto({nome,sobrenome}) {
+             return `${nome} ${sobrenome}`
+        };
+        console.log(pegarNomeCompleto(pessoa));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+
+</head>
+<body>
+    <h1>Título principal
+        <p id="paragrafo">Este é o paragrafo</p>
+        <ul class="lista">
+            <li class="item">Item 1</li>
+            <li class="item">Item 2</li>
+            <li class="item">Item 3</li>
+            <li class="item">Item 4</li>
+        </ul>
+    </h1>
+
+
+        <p id="paragrafo">Este é o paragrafo</p>
+        <ol class="lista">
+            <li class="Uva">Uva</li>
+            <li class="item">Limão</li>
+            <li class="item">Maçã</li>
+            <li class="item">Banana</li>
+        </ol>
+  
+
+    <script>
+        //Pegar todos os itens
+        var itensQuery = document.querySelectorAll('li');
+
+        console.log(itensQuery);
+
+        //Pegar itens individualmente
+        var lista = document.querySelector('.lista');
+
+        console.log(lista);
+
+        var listaUnica = document.querySelector('ol.lista');
+        console.log(listaUnica);
+
+    </script>
+</body>
+</html>

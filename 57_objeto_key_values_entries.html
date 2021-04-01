@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key values e entries</title>
+</head>
+<body>
+    <script>
+        let lista = ["feijão", 'macarrão', 'arroz', 'pipoca'];
+
+        console.log(Object.keys(lista));
+        console.log(Object.values(lista));
+        console.log(Object.entries(lista));//Mostra o indice e o valor
+
+        let pessoa = {
+            nome:'Eduardo',
+            sobrenome:'Chagas',
+            idade:36
+        }
+
+        console.log(Object.keys(pessoa));
+        console.log(Object.values(pessoa));
+        console.log(Object.entries(pessoa));//Mostra o indice e o valor
+    </script>
+</body>
+</html>

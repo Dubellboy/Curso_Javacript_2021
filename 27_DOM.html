@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <h1>Título principal
+        <p id="paragrafo">Este é o paragrafo</p>
+        <ul id="lista">
+            <li class="item">Item 1</li>
+            <li class="item">Item 2</li>
+            <li class="item">Item 3</li>
+            <li class="item">Item 4</li>
+        </ul>
+    </h1>
+
+    <script>
+        //DOM Document Object Model
+        //Alterar HTML pelo javascript
+
+        //Acessar pela TAG
+        var titulo = document.getElementsByTagName('h1')[0];
+
+        console.log(titulo);
+
+        //Acessar pelo ID
+        var paragrafo = document.getElementById('paragrafo');
+
+        console.log(paragrafo);
+
+        //Acessar por CLASSE
+        var itensDaLista = document.getElementsByClassName('item');
+
+        console.log(itensDaLista);
+
+
+    </script>
+</body>
+</html>

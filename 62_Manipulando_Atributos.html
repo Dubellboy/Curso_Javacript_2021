@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando atributos</title>
+    <style>
+        .imagem {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <img  src="../img/img1.jpeg" data-animal="Rio" class= "imagem"/><br />
+    <button onclick="trocarImagem('../img/img1.jpeg', 'Rio')">Rio</button>
+    <button onclick="trocarImagem('../img/img2.jpeg', 'Castelo')">Castelo</button>
+
+    <button onclick="pegarImagem()">Qual é a imagem?</button>
+
+    <script>
+        function trocarImagem(filename, localname) {
+
+            //Pegar um atributo usa se o SET
+            document.querySelector('.imagem').setAttribute('src', 'img/'+filename);
+            document.querySelector('.imagem').setAttribute('data-animal',localname);
+
+
+        }
+
+        function pegarImagem() {
+            let paisagem = document.querySelector('.imagem').getAttribute('data-animal')
+            alert("A paisagem é: " + paisagem);
+        }
+    </script>
+</body>
+</html>

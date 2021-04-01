@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos Arrays</title>
+</head>
+<body>
+    <script>
+        //Manipular array
+        let lista = ['Ovo', 'farinha','Corante', 'massa'];
+        let lista4 =['Prato', 'Fogão', 'Pia', 'Armário'];
+        lista[0] = 'Ovos';//Alterar o nome de um item
+        lista[4]= 'Liquidificador';//Adiciona item 
+        lista[lista.length] = 'liquidificador';//Adiciona, mas não é recomendável
+        let lista2 = ['Ovo', 'farinha','Corante', 'massa'];
+
+        /*************************ORDENAR ARRAY ORDEM ALFABETICA***********************/
+        let ordemLista = lista4.sort();
+        console.log("Lista ordenada: " + ordemLista)
+
+        let ordemDecre = lista4.reverse();
+        console.log("Lista decrescente: " + ordemDecre);
+
+        /*************************CONCATENAR LISTAS***************************/
+        let concLista = lista.concat(lista);
+        console.log('Duas listas concatenadas: ' + concLista)
+
+        /*********************REMOVER ITEM ESPECIFICO***********************************/
+        let lista3 = ['Ovo', 'farinha','Corante', 'massa'];
+         
+        lista3.splice(1,1) /*O segundo paramentro é qts itens será removido*/
+        let res5 = lista3;
+        console.log("Comando slice para remover um item: " + res5);
+        /***********************************************************/
+
+        let res = lista.toString();//Transaformar em string
+        let res1 = lista.join(';');//transforma em string separando pela condição colocadanos ()
+        let res2 = lista.indexOf('Corante')//Mostrar a posição da palavra, -1 quando não achar
+      
+
+        lista.pop();//Exclui o último item
+        lista.shift();//Exclui o primeiro item;
+        lista2.push('Prato');//Adicionar item
+
+        let res3 = lista;
+        let res4 = lista2;
+        
+
+        console.log(res);
+
+        /****************FUNÇÃO MAP****************************/
+        let arrayNum = [45,4,9,16,25];
+        let arrayNum2 = [];
+
+        arrayNum2 = arrayNum.map(function(item){/*Deve se criar uma função com uma ação*/
+            return item * 2;
+        });
+
+        let map = arrayNum2;/*Essa variável map recebe o novo valor resultado da ação da função*/
+
+        console.log("Usando o MAP: " + map);
+
+        /****************************FILTER*******************************/
+        arrayNum2 = arrayNum.filter(function (item){
+            return (item < 20) ? true : false;
+            
+        });
+
+        let arrayFilter = arrayNum2;
+
+        console.log("FILTER Array filtrado por uma condição: " + arrayFilter);
+
+
+        /****************************EVERY*********************************/
+
+        arrayNum2 = arrayNum.every(function (item){
+
+                return (item > 20) ? true : false;
+                
+        });
+
+            let arrayEvery = arrayNum2;
+
+        console.log("EVERY Array filtrado por uma condição: " + arrayEvery);
+
+        /******************************SOME********************************/
+        arrayNum2 = arrayNum.some(function (item){
+                return (item > 3) ? true : false;
+        });
+
+            let arraySome = arrayNum2;
+
+        console.log("SOME Array filtrado por uma condição: " + arraySome); 
+        
+        /*********************************FIND***************************************/
+        let numeros = [45,4,9,16,25]
+        let numeros2 = []
+
+        //findIndex encontra aposição no array
+        numeros2 = numeros.find(function (item){
+            return (item == 16) ? true : false;
+        });
+
+        let numFind = numeros2;
+
+        console.log("FIND número encontradao: " + numFind);
+
+</script>
+</body>
+</html>

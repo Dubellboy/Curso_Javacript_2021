@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var lista = ["laranja","Maçã", "Pera", "Jaca", "Limão"];
+    
+    //Criar um elemento ul
+    var listaUl = document.createElement('ul');
+
+    var body = document.getElementsByTagName('body');
+
+    console.log(body[0]);
+
+    //Adicionar um elemento filho
+    body[0].appendChild(listaUl);
+
+    var listaNoBody = document.getElementsByTagName('ul');
+    console.log(listaNoBody[0]);
+
+    for(var i = 0; i < lista.length; i++){  
+
+    var liFor = document.createElement('li');
+
+    var textoLi = document.createTextNode(lista[i]);
+
+    liFor.appendChild(textoLi);
+
+    console.log(liFor);
+
+    }
+
+</script>
+</body>
+</html>

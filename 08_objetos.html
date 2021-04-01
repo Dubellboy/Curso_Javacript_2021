@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            nome: "Eduardo",
+            idade: 36,
+            profissao: "Estudante"
+        };
+        console.log(obj);
+        console.log(obj.nome);// Acessar dado especifico pela notação de ponto
+        console.log(obj.idade);
+        console.log(obj.profissao);
+
+        obj.idade = 18; //Alteração do valor
+        console.log(obj.idade);
+
+        let carros = [
+            {nome:'Fiat', modelo:'Palio'},
+            {nome:'Fiat', modelo:'UNO'},
+            {nome:'Toyota', modelo:'Corolla'},
+            {nome:'Ferrari', modelo:'Spider'}
+        ];
+
+        console.log(carros[2].modelo);
+
+        let quadrado = {
+            lados: 4,
+            area(lado) {//Não precisa colocar o function
+                return lado * lado;
+            },
+            perimetro(lado){
+                //this se refere ao objeto
+                //return quadrado.lados * lado
+                return this.lados * lado;
+            }
+        }
+        console.log(quadrado.perimetro(5));
+    </script>
+</body>
+</html>

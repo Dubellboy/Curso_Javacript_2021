@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Fetch</title>
+</head>
+<body>
+    <script>
+        //Criar requisições AJAX
+
+        //colocar a requisição entre os parenteses e aguardar a resposta do servidor
+        const url = 'https://alunos.b7web.com.br/api/ping';
+        const params = {
+            method: 'POST',
+            body: JSON.stringify({
+                nome:'Eduardo',
+                idade: 36
+            })
+        };
+        fetch(url, params)
+            .then((r)=>r.json())
+            .then((json)=>{
+                console.log(json);
+            });
+                
+           
+    </script>
+</body>
+</html>

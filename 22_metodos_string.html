@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //lenght -> quantidade de caracteres
+        
+        var nome = "Eduardo";
+
+        console.log("lenght " + nome.length);
+
+        //indexOF -> Pegar caractere específico
+
+        console.log("indexOF " + nome[2]);
+
+        //slice -> fatiat a palavra
+        var frase = "O rato roeu a roupa do rei de roma";
+
+        var roeu = frase.slice(7, 11);
+        console.log(roeu);
+
+        //replace -> substituir
+
+        var novaFrase = frase.replace("roeu", "teste");
+
+        console.log(novaFrase);
+
+        //toUpperCase
+
+        var frase = "Esta é a frase que vamos manipular."
+        console.log(frase.toUpperCase());
+
+        //toLowerCase
+        console.log(frase.toLowerCase());
+
+        //trim -> icultar espaços digitados
+
+        var nome = "         Eduardo       ";
+        var nomeTrim = nome.trim();
+
+        console.log(nome);
+        console.log(nomeTrim);
+
+        //split -> separação de string
+
+        console.log(frase.split());
+
+    </script>
+</body>
+</html>

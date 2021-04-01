@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pessoa = {
+            nome: "Eduardo",
+            idade: 36,
+            falar: function(){
+                console.log("Olá, tudo bem?");
+            },
+            dizerNome: function(){
+            //this fazer referência a um atributo do 
+            //objeto.
+                console.log("O meu nome é " + this.nome);
+            },
+            aniversario: function(){
+                this.idade += 1;
+            }
+        };
+
+        console.log(pessoa.nome);
+
+        pessoa.falar();
+        pessoa.dizerNome();
+        pessoa.aniversario();
+
+        console.log(pessoa.idade);
+    </script>
+</body>
+</html>

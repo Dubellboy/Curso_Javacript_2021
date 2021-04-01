@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: #EEEEEE;
+        }
+        input [type=text] {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .azul  {
+            background-color: #0000FF;
+            color: #EEEEEE;
+        }
+
+        .vermelho {
+            background-color: #FF0000;
+            color: #EEEEEE;
+        }
+        .verde {
+            background-color:#00FF00 ;
+            color: black;
+        }
+        .azul:hover {
+            background-color: blue;
+        }
+        #telefone {
+            display: none;/*Não mostrar o telefone*/
+        }
+        #nome {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo" >Seja bem vindo!</h1>
+    <!--Colocar a função onclic k para a ação-->
+    <button onclick="azul()">Azul</button>
+    <button onclick="vermelho()">Vermelho</button>
+    <button onclick="verde()">Verde</button>
+    <br /><br />
+    <button onclick="mostrarTelefone(this)">Mostrar telefone</button>
+    <div id="telefone">9999999999</div>
+    <br /><br />
+    <button onclick="mostrarNome(this)">Mostrar Nome</button>
+    <div id="nome">Eduardo</div>
+
+    <script>
+        //Essas funções pegam as definições que forma definidas no CSS
+        function azul(){
+            limpar();
+            document.getElementById("titulo").classList.add('azul');
+        }
+
+        function vermelho(){
+            limpar();
+            document.getElementById("titulo").classList.add('vermelho');
+
+        }
+        function verde(){
+            limpar();
+            document.getElementById("titulo").classList.add('verde');
+
+        }
+        function limpar(){
+            document.getElementById("titulo").classList.remove("azul");    
+            document.getElementById("titulo").classList.remove("vermelho");  
+            document.getElementById("titulo").classList.remove("verde");     
+        }
+        function mostrarTelefone(elemento){
+            elemento.style.display = 'none';//ocultar o botão mostrar telefone
+            document.getElementById("telefone").style.display= "block";
+        }
+        function mostrarNome(elemento){
+            elemento.style.display = 'none';
+            document.getElementById("nome").style.display = "block";
+        }
+    </script>
+    
+</body>
+</html>
